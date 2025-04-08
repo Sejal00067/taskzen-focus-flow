@@ -56,8 +56,7 @@ const Timer: React.FC = () => {
         
         <Progress 
           value={progress} 
-          className="h-2 mb-6" 
-          indicatorClassName={timerState === 'work' ? 'bg-primary' : 'bg-accent'}
+          className={`h-2 mb-6 ${timerState === 'break' ? 'bg-secondary [&>div]:bg-accent' : ''}`}
         />
         
         <div className="flex justify-center space-x-3">
